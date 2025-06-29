@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderlust Travels</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-brand">Wanderlust Travels</div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" tabindex="-1">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Explore the World with Us</h1>
+      <p>Your adventure begins here. Discover breathtaking destinations and exclusive tour packages.</p>
+      <a href="#booking" class="btn-primary">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Destinations Showcase -->
+  <section class="destinations" id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destinations-grid">
+      <article class="destination-card">
+        <img src="images/paris.jpg" alt="Eiffel Tower, Paris" loading="lazy" />
+        <div class="destination-info">
+          <h3>Paris, France</h3>
+          <p>The city of lights and romance.</p>
+        </div>
+      </article>
+      <article class="destination-card">
+        <img src="images/bali.jpg" alt="Bali Beach" loading="lazy" />
+        <div class="destination-info">
+          <h3>Bali, Indonesia</h3>
+          <p>Paradise of beaches and temples.</p>
+        </div>
+      </article>
+      <article class="destination-card">
+        <img src="images/newyork.jpg" alt="New York Skyline" loading="lazy" />
+        <div class="destination-info">
+          <h3>New York, USA</h3>
+          <p>The city that never sleeps.</p>
+        </div>
+      </article>
+      <article class="destination-card">
+        <img src="images/kyoto.jpg" alt="Kyoto, Japan" loading="lazy" />
+        <div class="destination-info">
+          <h3>Kyoto, Japan</h3>
+          <p>Ancient temples and cherry blossoms.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Tour Packages -->
+  <section class="tours" id="tours">
+    <h2>Featured Tour Packages</h2>
+    <div class="tours-grid">
+      <article class="tour-card">
+        <h3>Romantic Paris Getaway</h3>
+        <ul>
+          <li>5 Days / 4 Nights</li>
+          <li>Hotel & Breakfast included</li>
+          <li>Guided city tours</li>
+        </ul>
+        <p class="tour-price">From $1,299</p>
+        <a href="#booking" class="btn-secondary">Inquire Now</a>
+      </article>
+      <article class="tour-card">
+        <h3>Bali Adventure</h3>
+        <ul>
+          <li>7 Days / 6 Nights</li>
+          <li>Resort stay</li>
+          <li>Excursions & water sports</li>
+        </ul>
+        <p class="tour-price">From $1,499</p>
+        <a href="#booking" class="btn-secondary">Inquire Now</a>
+      </article>
+      <article class="tour-card">
+        <h3>New York Explorer</h3>
+        <ul>
+          <li>4 Days / 3 Nights</li>
+          <li>Central hotel stay</li>
+          <li>CityPass included</li>
+        </ul>
+        <p class="tour-price">From $999</p>
+        <a href="#booking" class="btn-secondary">Inquire Now</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Booking Inquiry Form -->
+  <section class="booking" id="booking">
+    <h2>Booking Inquiry</h2>
+    <form class="booking-form" id="bookingForm" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+        <div class="form-error" id="nameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+        <div class="form-error" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination<span aria-hidden="true">*</span></label>
+        <select id="destination" name="destination" required aria-required="true">
+          <option value="">Select</option>
+          <option value="paris">Paris</option>
+          <option value="bali">Bali</option>
+          <option value="newyork">New York</option>
+          <option value="kyoto">Kyoto</option>
+        </select>
+        <div class="form-error" id="destinationError"></div>
+      </div>
+      <div class="form-group">
+        <label for="dates">Preferred Dates</label>
+        <input type="text" id="dates" name="dates" placeholder="e.g. July 10-17, 2025" />
+      </div>
+      <div class="form-group">
+        <label for="message">Additional Message</label>
+        <textarea id="message" name="message" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Submit Inquiry</button>
+      <div class="form-success" id="formSuccess" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-slider" tabindex="0" aria-live="polite">
+      <div class="testimonial active">
+        <blockquote>
+          “The trip to Bali was amazing! Everything was taken care of, and the guides were fantastic.”
+        </blockquote>
+        <p class="testimonial-author">— Sarah L.</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          “Loved our Paris getaway. The booking process was seamless and the service was excellent.”
+        </blockquote>
+        <p class="testimonial-author">— Ajay R.</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          “Our New York tour was packed with adventure and fun. Highly recommend this agency!”
+        </blockquote>
+        <p class="testimonial-author">— Maria S.</p>
+      </div>
+      <button class="testimonial-prev" aria-label="Previous testimonial">&#8592;</button>
+      <button class="testimonial-next" aria-label="Next testimonial">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@wanderlust.com</p>
+        <p>Phone: +1 234-567-890</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" aria-label="Instagram"><span class="icon-instagram"></span>Instagram</a></li>
+          <li><a href="#" aria-label="Facebook"><span class="icon-facebook"></span>Facebook</a></li>
+          <li><a href="#" aria-label="Twitter"><span class="icon-twitter"></span>Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Wanderlust Travels. All rights reserved.
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
